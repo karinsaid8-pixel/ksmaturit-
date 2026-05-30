@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#07006c",
+                        "surface-container-high": "#e6e8ea",
+                        "success-emerald": "#10b981",
+                        "border-subtle": "#e2e8f0",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eceef0",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#006c49",
+                        "tertiary-fixed": "#e1e0ff",
+                        "primary": "#3525cd",
+                        "text-muted": "#475569",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed": "#e2dfff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "text-main": "#1e293b",
+                        "on-primary-fixed": "#0f0069",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-secondary-container": "#00714d",
+                        "surface-tint": "#4d44e3",
+                        "on-secondary-fixed": "#002113",
+                        "error-container": "#ffdad6",
+                        "outline": "#777587",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary": "#3130c0",
+                        "primary-container": "#4f46e5",
+                        "on-tertiary-container": "#d9d8ff",
+                        "background": "#f7f9fb",
+                        "outline-variant": "#c7c4d8",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#4b4dd8",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-background": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#6ffbbe",
+                        "secondary-container": "#6cf8bb",
+                        "surface": "#f7f9fb",
+                        "on-surface-variant": "#464555",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#dad7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-xs": ["JetBrains Mono"],
+                        "headline-xl": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-pattern {
+            background-color: #f7f9fb;
+            background-image: radial-gradient(#d2d1e6 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-['Inter'] text-text-main">
+<!-- TopNavBar (Shared Component) -->
+<div class="relative flex h-auto w-full flex-col bg-[#f9f8fb] group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8e8f3] px-4 lg:px-10 py-3 bg-white/80 backdrop-blur-md sticky top-0 z-50 rounded-lg shadow-sm">
+<div class="flex items-center gap-4 text-[#0f0e1b]">
+<div class="size-4 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0f0e1b] text-lg font-bold leading-tight tracking-[-0.015em]">FSL Portfolio</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<div class="hidden md:flex items-center gap-9"><a class="text-sm font-medium hover:text-primary transition-colors text-primary border-b-2 border-primary" href="#">Home</a>
+<a class="text-[#0f0e1b] text-sm font-medium hover:text-primary transition-colors" href="projects.html">Progetti</a>
+<a class="text-[#0f0e1b] text-sm font-medium hover:text-primary transition-colors" href="projects.html">Competenze</a></div>
+
+</div>
+</header>
+<!-- Hero Content Section -->
+<main class="mt-8 @container">
+<div class="flex flex-col gap-8 px-4 py-12 @[864px]:flex-row @[864px]:items-center @[864px]:gap-16">
+<!-- Hero Text -->
+<div class="flex flex-col gap-8 flex-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container w-fit border border-secondary/20 shadow-sm">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-tight uppercase">Percorso Formativo FSL</span>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-text-main text-4xl font-extrabold leading-[1.1] tracking-[-0.033em] @[480px]:text-5xl @[864px]:text-6xl">Crescita e Futuro: <br class="hidden @[1200px]:block"><span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary italic">il mio percorso FSL</span></h1>
+<p class="text-text-muted text-lg font-normal leading-relaxed @[480px]:text-xl max-w-[600px]">
+                                        Questo sito raccoglie le attività svolte durante il mio percorso FSL. Attraverso progetti, esperienze e competenze acquisite, ho avuto l'opportunità di avvicinarmi al mondo del lavoro e sviluppare capacità utili per il mio futuro scolastico e professionale.</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="projects.html" class="group flex min-w-[160px] cursor-pointer items-center justify-center gap-2 rounded-lg h-14 px-6 bg-primary text-on-primary text-base font-bold shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all"><span class="">Scopri i miei progetti</span><span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span></a>
+
+</div>
+<!-- Trust/Stats Indicators -->
+<div class="flex flex-wrap gap-8 pt-4 border-t border-border-subtle">
+<div class="flex flex-col">
+
+
+</div>
+<div class="flex flex-col">
+
+
+</div>
+<div class="flex flex-col">
+
+
+</div>
+</div>
+</div>
+<!-- Hero Visual -->
+<div class="relative flex-1 group">
+<div class="absolute -inset-4 bg-gradient-to-tr from-primary/10 to-success-emerald/10 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+<div class="relative overflow-hidden aspect-[4/5] @[864px]:aspect-square bg-surface-container-highest rounded-xl border border-border-subtle shadow-2xl">
+<div class="absolute inset-0 hero-pattern opacity-40"></div>
+<img class="w-full h-full object-cover relative z-10 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" data-alt="A professional medical technology composition showing a modern stethoscope laying next to a high-end tablet displaying complex biological data and neural network diagrams. The lighting is clinical and bright with soft indigo and emerald highlights reflecting off the glass surfaces. The style is a clean, corporate academic photograph with a shallow depth of field, emphasizing the intersection of healthcare and digital innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCINYAl1W_0qYHcNjkns4hyHsnoy2xoHpvOt2VVgC28BsK5XMkF2vuGy7vYJYHxxY6betO3umwrW2kLdzybyIg5vWVLHAtjX7sMcLKOZ6Q5dkm44tnJfNPEq61gEnJ0Myx7r8kljvqEyPQC_-UBGRgfml7u8-FWHn-oTGVJLr5XK7X-iy61q3_z1t0zonlQ8xbPWF4_icITysS3ikUYFYEJ8fNN-iEwmRCu-IrQeDRD15lhkYCs5Vef4Nu_7p9_AT2A0kREHZLBwIHh8g">
+<!-- Decorative Badge -->
+<div class="absolute top-6 right-6 z-20 flex flex-col items-end gap-2">
+<div class="bg-success-emerald text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transform rotate-3">
+<span class="material-symbols-outlined !text-[18px]" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">verified_user</span>
+
+</div>
+</div>
+</div>
+<!-- Tech Stack Overlay -->
+
+</div>
+</div>
+<!-- Secondary Info Grid (Shared Component Styles) -->
+<div class="grid grid-cols-1 @[480px]:grid-cols-2 @[864px]:grid-cols-3 gap-6 p-4 mb-16">
+<div class="flex flex-col gap-4 rounded-xl border border-border-subtle bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-default group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors" data-icon="Monitor">
+<span class="material-symbols-outlined">monitor</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-bold">Ospedale Bolognini</h3>
+<p class="text-text-muted text-sm leading-relaxed">Percorso di osservazione delle professioni sanitarie e dell'organizzazione ospedaliera presso l'ASST Bergamo Est - Ospedale Bolognini.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-subtle bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-default group">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors" data-icon="Pulse">
+<span class="material-symbols-outlined">pulse_alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-bold">Distretto economia sociale solidale</h3>
+<p class="text-text-muted text-sm leading-relaxed">Realizzazione di articoli e infografiche attraverso attivit di gruppo e laboratori informatici con il supporto dei giornalisti</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-border-subtle bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-default group">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors" data-icon="Stethoscope">
+<span class="material-symbols-outlined">stethoscope</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main text-lg font-bold">Parrocchia Sant'Anna</h3>
+<p class="text-text-muted text-sm leading-relaxed">Partecipazione ad attività educative, laboratori, giochi di gruppo e momenti di collaborazione e socializzazione</p>
+</div>
+</div>
+</div>
+</main>
+
+</div>
+</div>
+</div>
+</div>
+<script>
+        // Micro-interaction for smooth scrolling or hover effects
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                // Potential sound effect or haptic-like animation can go here
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
