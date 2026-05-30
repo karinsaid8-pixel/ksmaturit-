@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="light" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Progetti - Portfolio Professionale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "on-background": "#0b1c30",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface-variant": "#464555",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#cbdbf5",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-variant": "#d3e4fe",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-tertiary-fixed": "#351000",
+                        "on-surface": "#0b1c30",
+                        "surface-container": "#e5eeff",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#00714d",
+                        "on-secondary-fixed-variant": "#005236",
+                        "primary": "#3525cd",
+                        "inverse-primary": "#c3c0ff",
+                        "surface-tint": "#4d44e3",
+                        "on-tertiary-container": "#ffd2be",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "text-main": "#1e293b",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#7e3000",
+                        "on-secondary-fixed": "#002113",
+                        "secondary-container": "#6cf8bb",
+                        "on-primary-container": "#dad7ff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#213145",
+                        "primary-container": "#4f46e5",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#006c49",
+                        "surface": "#f8fafc",
+                        "tertiary-container": "#a44100",
+                        "primary-fixed": "#e2dfff",
+                        "text-muted": "#475569",
+                        "inverse-on-surface": "#eaf1ff",
+                        "outline": "#777587"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "1.5rem",
+                        "gutter": "1.5rem",
+                        "container-max": "1280px",
+                        "section-gap": "5rem"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-xl-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.25", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .modal-backdrop {
+            background-color: rgba(11, 28, 48, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+<script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-background text-text-main font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container" x-data="{ 
+    activeProject: null,
+    projects: {
+        bolognini: {
+            title: 'Ospedale Bolognini',
+            tagline: 'Clinica / Tecnologie Mediche',
+            image: 'https://lh3.googleusercontent.com/aida/ADBb0uhRXmaX6qePeH8lhVLGW0cgojLm_bCFKG1SMIYBu2tM8B3AbX4LqJ5DCVa25HjqDenaWhVzH-VISvzED63F2rJAgIQk1AEA6HruKlVfv3n7OVDuYQjyeXXzpflYXKgJs-ZRwp1zJ4-s3EEETqWDkgHlnYdQ79SNEJEaWeuqko-JVNasj874hYbqSh5KmgXpZ-bV4WNAm8TD8qVGBWXZe7az3pZyNCOaCFKdcuMF-U3ZB7j9hC6YsQb5RX8',
+            description: &quot;Un'immersione professionale presso l'ASST Bergamo Est per comprendere l'eccellenza sanitaria integrata tra tecnologia e cura clinica.&quot;,
+            activities: &quot;Percorso PCTO 2023/2024 svolto presso l'Ospedale Bolognini di Seriate. L'esperienza ha offerto una visione a 360° sulla gestione ospedaliera, combinando protocolli clinici avanzati e infrastruttura tecnologica critica.&quot;,
+            outings: &quot;Osservazione dei reparti di Blocco Operatorio e Pronto Soccorso, con focus sulla gestione dei flussi e protocolli di emergenza.&quot;,
+            challenges: &quot;Studio dei sistemi di monitoraggio IoMT in Terapia Intensiva e automazione dei flussi in Laboratorio Analisi.&quot;,
+            labs: &quot;Approfondimento sui protocolli HL7 e Digital Health (sensori glicemici di ultima generazione).&quot;,
+            outcomes: ['Analisi flussi di lavoro complessi', 'Comprensione ecosistema IoMT', 'Lavoro di équipe multidisciplinare']
+        },
+        dess: {
+            title: 'DISTRETTO DELL\'ECONOMIA SOCIALE SOLIDALE A BERGAMASCA',
+            tagline: 'Editoria / Comunicazione / Sociale',
+            image: 'https://lh3.googleusercontent.com/aida/ADBb0ujP8PCwQrZvOmA59CwVchGxmdYndn1Dwh8fxkQvCQ4eoptUp1Nwa3iymOgMG4OjTBY917hZR1nMAtdBDn2kDAHEPzkmoDv-ireeMHgu4y5d9divbgmBsBtu793-qXUdmC7jYLTJIe9kuO4NbXoFDOa6UeC_kAdDxoBQm3V2fWsISEH-pC0bEi5WQhKTUIbjFI0s0PE3arlhTbdN6V3wNfNPlo8XSktsTjb3ACSJeYpZyUvpb7ltyh6TUA',
+            description: 'Un progetto dedicato alla realizzazione di un articolo di giornale e infografiche multimediali per promuovere l\'economia solidale.',
+            activities: &quot;Durante questo percorso ho partecipato a un progetto dedicato alla realizzazione di un articolo di giornale e di diverse infografiche, lavorando insieme ai miei compagni con il supporto del professore e di alcuni giornalisti. L’attività è iniziata con un’introduzione svolta in Aula Magna dai componenti del DESS, che ci hanno presentato il loro giornale “infosOStenibile” e ci hanno spiegato come viene realizzato un giornale o una rivista.&quot;,
+            outings: &quot;In quell’occasione ci hanno anche illustrato i diversi tipi di infografiche e l’obiettivo del lavoro che avremmo svolto come classe. Successivamente abbiamo approfondito la struttura di un articolo di giornale, analizzando come organizzare le informazioni, come scrivere un testo chiaro e come rendere più efficace la comunicazione attraverso titoli, immagini e grafici.&quot;,
+            challenges: &quot;Questo momento è stato utile per comprendere meglio il lavoro giornalistico e il modo in cui vengono presentate le notizie. Nel laboratorio di informatica il professore ci ha mostrato come utilizzare un’applicazione specifica per creare grafici in modo corretto.&quot;,
+            labs: &quot;Dopo la spiegazione ci siamo divisi in gruppi e abbiamo iniziato a realizzare il materiale assegnato, occupandoci sia della parte scritta sia della creazione di grafici e infografiche. Lavorare in gruppo è stato importante perché ci ha permesso di confrontarci, dividere i compiti e collaborare per raggiungere un risultato comune. Durante le lezioni successive abbiamo continuato il lavoro sull’articolo, confrontandoci con i giornalisti e ricevendo suggerimenti utili per migliorare il contenuto e la presentazione del progetto.&quot;,
+            outcomes: ['Conoscenza del mondo del giornalismo', 'Competenze in data visualization', 'Collaborazione in team editoriale', 'Comunicazione chiara ed efficace']
+        },
+        oratorio: {
+            title: &quot;Parrocchia Sant'Anna - Oratorio S. Cuore&quot;,
+            tagline: 'Comunità / Leadership / Educazione',
+            image: 'https://lh3.googleusercontent.com/aida/ADBb0uhAS5oW4FmBM_MwI33uxI0t8jjqeFgQot6_sRhBf8G1tJ5JcxnxsNqNGSiHk15VJMbQ19Vkr2-wnaq4dUCeO1TY_PIf-aVOblF_vpIzJNT9DF4ffOydSWWcEzMA-7iAhR7HudRwaZJer6IK-tTxSrEHFfls6004UpJVeGeHPyhgrtfFpKrvfVlwNrfWdv8PFm7-9BRPUaMBHPy39HGfQ0_sp50iW8WJHY5cbn5cc0Aha4wI_5nMSi-TUxk',
+            description: &quot;Iniziativa comunitaria focalizzata sull'inclusione educativa e la collaborazione giovanile attraverso attività ricreative e laboratoriali.&quot;,
+            activities: &quot;Coordinamento di attività di gruppo e laboratori didattici volti a favorire l'inclusione e il gioco di squadra tra i ragazzi.&quot;,
+            outings: &quot;Organizzazione di momenti di socializzazione esterna: gita in montagna a Gromo, giornate in piscina e visita al parco divertimenti Leolandia.&quot;,
+            challenges: &quot;Esperienza di arrampicata sportiva per promuovere il superamento dei propri limiti fisici e mentali in sicurezza.&quot;,
+            labs: &quot;Laboratori creativi e manuali, tra cui l'attività 'Seminary Box' per stimolare la riflessione e la manualità.&quot;,
+            outcomes: ['Competenze relazionali e comunicative', 'Capacità collaborative e di team building', 'Abilità organizzative e problem solving']
+        }
+    }
+}">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-background w-full top-0 sticky shadow-sm transition-all duration-200 ease-in-out z-50">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight" href="#">
+            Portfolio
+        </a>
+<!-- Navigation Links (Desktop) -->
+
+<!-- Primary Action -->
+<div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-8 font-body-md text-body-md mr-8"><a class="text-text-muted dark:text-outline-variant hover:text-primary transition-colors" href="#">Home</a><a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1" href="#">Progetti</a><a class="text-text-muted dark:text-outline-variant hover:text-primary transition-colors" href="#">Competenze</a></div>
+
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-gutter py-section-gap">
+<!-- Header Section -->
+<header class="max-w-3xl mb-16">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-6">
+            Esperienze e progetti svolti</h1>
+<p class="font-body-lg text-body-lg text-text-muted">Un percorso descrittivo che evidenzia la mia crescita formativa e personale nei settori medico, tecnologico e sociale attraverso le attività di FSL.</p>
+</header>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project 1: Ospedale Bolognini -->
+<article class="col-span-1 md:col-span-7 bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="relative h-64 md:h-80 w-full overflow-hidden bg-surface-container">
+<img alt="Ospedale Bolognini" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbJuYi7EsjYpfY-W7gj5cv-2ilpAkBmGfyMmIJJKXsw3HomUXM39KWlgP6egXT2hFD_D3zTvmj0zLqN5v0nNiTtS85_7BPbbw-3CSia86ueQ-urehRxZ15d-ItJjDerjVtv5OG5MPGBBid7uqcU43ae9vrLzTHkGBmCynv--NfinCJqJH3qw0csRettbepVlMmjg8uA5wwpYYDFuKGBQefktZHbxBCfPLV7BefX_1z3DrnN0TpY59quGaxbrwfKHYgN0jQcvNR9X0DyQ">
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-1">medical_services</span>
+                        Clinica / Tecnologie Mediche
+                    </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-3">Ospedale Bolognini</h2>
+<p class="font-body-md text-body-md text-text-muted mb-6">
+                    L'ASST Bergamo Est - Ospedale Bolognini di Seriate è un polo sanitario di eccellenza. Durante il PCTO ho svolto un percorso di osservazione multidisciplinare...
+                </p>
+<div class="mt-auto pt-4">
+<button @click="activeProject = projects.bolognini" class="inline-flex items-center text-primary font-label-md text-label-md hover:gap-2 transition-all">
+                        Scopri di più <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 2: DESS (Updated) -->
+<article class="col-span-1 md:col-span-5 bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="relative h-48 md:h-64 w-full overflow-hidden bg-surface-container">
+<img alt="DESS" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYEFW0mQQB-eZjngT3Ph9tX7gzaVWmf-fLXhVVGfq2k9Ulu6tcZiFCjtOhWxfuuxfUfMU8aMvgvPUESZUNrv-H-wzvZdZvFkQ_PI1CD961Yos7MLzal6TZp_3hOW2qviqVgZx9ujAjqu2DawYz0mG3fgYzf785ws90_rxx1evqh2JG46ErrnoZuapwvzXRBYMIwxx1ZsWLpHYb3pBjBL9lsQOarhRaH0C7rXjjJlfuCr-1Mrv2dX7jMfXwfhO10aKluezqPSm5Uhu-Q">
+</div>
+<div class="p-card-padding flex flex-col flex-grow">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-primary-container/10 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-1">news</span>
+                        Editoria / Sociale
+                    </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3 leading-tight uppercase min-h-[3rem]" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">DISTRETTO DELL'ECONOMIA SOCIALE SOLIDALE A BERGAMASCA</h2>
+<p class="font-body-md text-body-md text-text-muted mb-6 line-clamp-3">
+                    Partecipazione a un progetto dedicato alla realizzazione di un articolo di giornale e di diverse infografiche professionali...
+                </p>
+<div class="mt-auto pt-4">
+<button @click="activeProject = projects.dess" class="inline-flex items-center text-primary font-label-md text-label-md hover:gap-2 transition-all">Scopri di più <span class="material-symbols-outlined ml-1">arrow_forward</span></button>
+</div>
+</div>
+</article>
+<!-- Project 3: Oratorio -->
+<article class="col-span-1 md:col-span-12 bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row group">
+<div class="relative h-64 md:h-auto md:w-2/5 overflow-hidden bg-surface-container shrink-0">
+<img alt="Progetto Sociale" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcDjxpYyRR0Jm9kLucn50lOYTgNFa8aRe4RHrBNCk6XsypdtKG6FNhPOf-vlo6ZwlII1RWbq8_AvpLi9O6p90glq6e2BMAMGdvKMUMuzxYdmhb0P8GFpnAByhjziVUo5f9-xhLP2npZdWdrJ9cFv2lw2Z3r_Ah2Nj3J2ODVy9hpWGRmQ2hQ-u2ErYXIM-41lLPQeraa1ix6JyYb6h2SA3UbFjhR611mkxvIr1d9ZzU4-vIK97s2VJ8_a3dNr5GC0fUpjUk8hi8xNLTwg">
+</div>
+<div class="p-card-padding md:p-8 flex flex-col justify-center w-full">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-1">groups</span>
+                        Comunità / Leadership
+                    </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Parrocchia Sant'Anna - Oratorio S. Cuore</h2>
+<p class="font-body-md text-body-md text-text-muted max-w-2xl mb-6">
+                    Gestione di un'iniziativa comunitaria focalizzata sull'inclusione educativa e la collaborazione giovanile. Coordinamento di team interfunzionali...
+                </p>
+<div>
+<button @click="activeProject = projects.oratorio" class="inline-flex items-center text-primary font-label-md text-label-md hover:gap-2 transition-all">
+                        Scopri di più <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Detail Modal -->
+<div @keydown.escape.window="activeProject = null" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-backdrop" x-show="activeProject" x-transition:enter="transition ease-out duration-300" x-transition:enter-end="opacity-100" x-transition:enter-start="opacity-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-end="opacity-0" x-transition:leave-start="opacity-100" style="display: none;">
+<div @click.away="activeProject = null" class="bg-surface-container-lowest w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden modal-content flex flex-col overflow-y-auto" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-end="scale-100 translate-y-0" x-transition:enter-start="scale-95 translate-y-4" style="max-height: 90vh;">
+<div class="relative h-64 md:h-80 w-full shrink-0">
+<img :src="activeProject?.image" alt="Cover" class="w-full h-full object-cover" src="">
+<button @click="activeProject = null" class="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-8 md:p-12"><div class="flex flex-col gap-8">
+<!-- Header Section -->
+<div class="border-b border-outline-variant/30 pb-6">
+<span class="text-secondary font-label-md uppercase tracking-widest mb-2 block" x-text="activeProject?.tagline"></span>
+<h2 class="font-headline-xl text-primary text-2xl md:text-4xl lg:text-5xl mb-4 leading-tight" x-text="activeProject?.title"></h2>
+<p class="text-body-lg text-text-muted max-w-3xl" x-text="activeProject?.description"></p>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Left: Core Sections -->
+<div class="lg:col-span-2 space-y-10">
+<section>
+<h3 class="text-primary font-headline-md mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2">description</span> Il Progetto Editoriale
+        </h3>
+<p class="text-body-md text-text-main leading-relaxed" x-text="activeProject?.activities"></p>
+</section>
+<section>
+<h3 class="text-primary font-headline-md mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2">bar_chart</span> Metodologia e Strumenti
+        </h3>
+<p class="text-body-md text-text-main leading-relaxed" x-text="activeProject?.outings"></p>
+</section>
+<section>
+<h3 class="text-primary font-headline-md mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2">psychology</span> Sviluppo e Risultati
+        </h3>
+<p class="text-body-md text-text-main leading-relaxed" x-text="activeProject?.challenges"></p>
+</section>
+<!-- Extended view for DESS specific content if needed, but using existing fields to map the narrative -->
+<template x-if="activeProject === projects.dess" class=""><section class="space-y-4"><h3 class="text-primary font-headline-md mb-4 flex items-center"><span class="material-symbols-outlined mr-2">groups</span> Lavoro Collaborativo e Riflessioni</h3><p class="text-body-md text-text-main leading-relaxed">Ogni gruppo ha poi esposto alla classe il tema scelto e il lavoro svolto, spiegando gli argomenti trattati e mostrando i grafici realizzati. Questa esperienza è stata molto interessante perché mi ha permesso di conoscere meglio il mondo del giornalismo e della comunicazione, ma anche di utilizzare strumenti digitali e lavorare in modo collaborativo.</p><p class="text-body-md text-text-main leading-relaxed">Inoltre, ho avuto la possibilità di partecipare attivamente alla creazione di un progetto completo, sviluppando maggiore attenzione nell’organizzazione delle informazioni e nella comunicazione dei contenuti in modo chiaro ed efficace.</p></section></template>
+</div>
+<!-- Right: Labs & Skills -->
+<div class="lg:col-span-1 space-y-8">
+<div class="p-6 bg-primary/5 rounded-2xl border border-primary/10">
+<h3 class="text-primary font-bold text-lg mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2">edit_note</span> Laboratori e Focus
+        </h3>
+<p class="text-sm text-text-main leading-relaxed" x-text="activeProject?.labs"></p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-2xl">
+<h4 class="font-bold text-on-surface mb-3">Competenze Sviluppate</h4>
+<ul class="space-y-2">
+<template :key="skill" x-for="skill in activeProject?.outcomes">
+<li class="flex items-start text-sm text-text-muted">
+<span class="material-symbols-outlined text-secondary text-[18px] mr-2">check_circle</span>
+<span x-text="skill"></span>
+</li>
+</template>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="pt-8 mt-4 border-t border-outline-variant/30 flex justify-end">
+<button @click="activeProject = null" class="px-8 py-3 bg-on-surface text-surface rounded-full font-label-md hover:bg-primary transition-all flex items-center">
+      Chiudi Dettagli <span class="material-symbols-outlined ml-2">keyboard_return</span>
+</button>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-background w-full mt-section-gap border-t border-outline-variant dark:border-outline opacity-80 hover:opacity-100 transition-opacity">
+<div class="max-w-container-max mx-auto px-gutter py-12 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">
+            Portfolio
+        </div>
+
+<div class="flex items-center gap-6 font-label-md text-label-md">
+
+
+
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

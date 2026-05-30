@@ -1,0 +1,268 @@
+<!DOCTYPE html><html class="light" lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#00714d",
+                    "tertiary-container": "#a44100",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed": "#002113",
+                    "secondary": "#006c49",
+                    "primary": "#3525cd",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#0b1c30",
+                    "on-primary": "#ffffff",
+                    "outline": "#777587",
+                    "primary-fixed": "#e2dfff",
+                    "on-primary-container": "#dad7ff",
+                    "on-tertiary-container": "#ffd2be",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "on-error-container": "#93000a",
+                    "on-background": "#0b1c30",
+                    "tertiary": "#7e3000",
+                    "text-main": "#1e293b",
+                    "on-tertiary-fixed": "#351000",
+                    "surface-dim": "#cbdbf5",
+                    "surface-bright": "#f8f9ff",
+                    "surface": "#f8fafc",
+                    "primary-container": "#4f46e5",
+                    "inverse-primary": "#c3c0ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed": "#0f0069",
+                    "text-muted": "#475569",
+                    "inverse-surface": "#213145",
+                    "background": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-container": "#e5eeff",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "secondary-fixed-dim": "#4edea3",
+                    "outline-variant": "#c7c4d8",
+                    "secondary-container": "#6cf8bb",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-tint": "#4d44e3",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "section-gap": "5rem",
+                    "container-max": "1280px",
+                    "card-padding": "1.5rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-xl-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gradient-mesh {
+            background-color: #f8f9ff;
+            background-image: radial-gradient(at 0% 0%, hsla(243, 75%, 95%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(161, 94%, 96%, 1) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-text-main font-body-md">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 border-b border-outline-variant bg-surface">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center h-20 px-gutter">
+<div class="text-headline-md font-headline-md font-extrabold text-primary">Portfolio</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-muted font-medium hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-text-muted font-medium hover:text-primary transition-colors duration-200" href="#">Progetti</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1" href="#">Competenze</a>
+</nav>
+
+</div>
+</header>
+<main class="gradient-mesh pb-20">
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-gutter pt-20 pb-16">
+<div class="max-w-3xl">
+
+<h1 class="text-headline-xl font-headline-xl text-on-background mb-6">Le Mie Competenze</h1>
+<p class="text-body-lg font-body-lg text-text-muted leading-relaxed">Un insieme di esperienze e competenze acquisite attraverso percorsi formativi, collaborazioni con aziende e attivit  nel sociale, che hanno contribuito a costruire un profilo personale e professionale orientato alla crescita, all’innovazione e al lavoro di squadra.</p>
+</div>
+</section>
+<!-- Section 1: Ospedale Bolognini -->
+<section class="max-w-[1280px] mx-auto px-gutter py-12">
+<div class="mb-10">
+<h2 class="text-label-md font-label-md text-primary uppercase tracking-widest mb-2">FSL / Esperienza Sanitaria</h2>
+<h3 class="text-headline-lg font-headline-lg text-on-background">ASST BERGAMO EST - OSPEDALE BOLOGNINI</h3>
+<div class="h-1 w-20 bg-primary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Competency 1 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="visibility">visibility</span>
+<h4 class="font-bold text-on-background mb-2">Capacità di osservazione dell’ambiente sanitario</h4>
+<p class="text-body-md text-text-muted">Durante le visite ai laboratori di analisi, al centro prelievi, al pronto soccorso e ai vari reparti ospedalieri ho potuto osservare da vicino come funziona una struttura sanitaria. Questa competenza serve per comprendere l’organizzazione dell’ospedale e le attività svolte nei diversi reparti.</p>
+</div>
+<!-- Competency 2 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="group">group</span>
+<h4 class="font-bold text-on-background mb-2">Conoscenza delle figure professionali sanitarie</h4>
+<p class="text-body-md text-text-muted">Incontrando professionisti come infermieri, ostetriche, dietista, fisioterapista, assistente sociale e tecnici di laboratorio, ho imparato quali sono i loro compiti e con chi collaborano. Questa competenza serve per capire il ruolo delle diverse professioni all’interno del sistema sanitario.</p>
+</div>
+<!-- Competency 3 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="psychology_alt">psychology_alt</span>
+<h4 class="font-bold text-on-background mb-2">Capacità di ascolto e apprendimento teorico</h4>
+<p class="text-body-md text-text-muted">Attraverso spiegazioni, presentazioni PowerPoint e incontri con i professionisti, ho acquisito informazioni sui percorsi di studio e sul lavoro svolto in ospedale. Questa competenza serve per apprendere nuove conoscenze in modo attento e comprendere meglio il settore sanitario.</p>
+</div>
+<!-- Competency 4 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="gavel">gavel</span>
+<h4 class="font-bold text-on-background mb-2">Conoscenza delle norme e dei comportamenti in ospedale</h4>
+<p class="text-body-md text-text-muted">Nel blocco operatorio gli infermieri mi hanno spiegato gli elementi presenti nella sala operatoria e il comportamento corretto da mantenere. Questa competenza serve per comprendere l’importanza delle regole, della sicurezza e dell’igiene negli ambienti sanitari.</p>
+</div>
+</div>
+</section>
+<!-- Section 2: DESS - Updated -->
+<section class="max-w-[1280px] mx-auto px-gutter py-12">
+<div class="mb-10">
+<h2 class="text-label-md font-label-md text-secondary uppercase tracking-widest mb-2">FSL/ ESPERIENZA INFORMATICA</h2>
+<h3 class="text-headline-lg font-headline-lg text-on-background">DISTRETTO DELL'ECONOMIA SOCIALE - SOLIDALE&nbsp;</h3>
+<div class="h-1 w-20 bg-secondary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Competency 1 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="groups">groups</span>
+<h4 class="font-bold text-on-background mb-2">Capacità di lavorare in gruppo</h4>
+<p class="text-body-md text-text-muted">Durante il progetto ho collaborato con i compagni nella realizzazione dell’articolo e dei grafici, confrontandoti e dividendo i compiti. Questa competenza serve per cooperare con altre persone in modo organizzato e raggiungere un obiettivo comune.</p>
+</div>
+<!-- Competency 2 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="edit_note">edit_note</span>
+<h4 class="font-bold text-on-background mb-2">Competenze nella scrittura di un articolo</h4>
+<p class="text-body-md text-text-muted">Attraverso le spiegazioni dei giornalisti e del professore ho imparato la struttura di un articolo e come sviluppare un testo informativo. Questa competenza serve per comunicare informazioni in modo chiaro, ordinato e comprensibile.</p>
+</div>
+<!-- Competency 3 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="laptop_mac">laptop_mac</span>
+<h4 class="font-bold text-on-background mb-2">Competenze digitali e informatiche</h4>
+<p class="text-body-md text-text-muted">Nel laboratorio di informatica ho utilizzato applicazioni per creare grafici e completare il lavoro assegnato. Questa competenza serve per usare strumenti digitali utili nello studio e nel lavoro.</p>
+</div>
+<!-- Competency 4 -->
+<div class="bg-surface-container-lowest p-card-padding rounded-xl border border-outline-variant hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="bar_chart">bar_chart</span>
+<h4 class="font-bold text-on-background mb-2">Capacità di analisi e rappresentazione dei dati</h4>
+<p class="text-body-md text-text-muted">Realizzando grafici e infografiche ho imparato a organizzare e rappresentare dati in modo visivo. Questa competenza serve per rendere le informazioni più semplici da comprendere e più efficaci da comunicare.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Oratorio -->
+<section class="max-w-[1280px] mx-auto px-gutter py-12">
+<div class="bg-surface-container rounded-[2rem] p-10 md:p-16 border border-outline-variant">
+<div class="mb-12">
+<h2 class="text-label-md font-label-md text-tertiary uppercase tracking-widest mb-2">FSL/ ESPERIENZA EDUCATIVA</h2>
+<h3 class="text-headline-lg font-headline-lg text-on-background">PARROCCHIA SANT'ANNA - ORATORIO S. CUORE</h3>
+<div class="h-1 w-20 bg-tertiary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10"><div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">rocket_launch</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Spirito di iniziativa</h4>
+<p class="text-body-md text-text-muted">Durante le attività proposte ho partecipato in modo attivo ai giochi, ai laboratori e alle esperienze di gruppo, mostrando disponibilità e interesse nelle diverse situazioni.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">groups</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Capacità di relazionarmi con gli altri</h4>
+<p class="text-body-md text-text-muted">Nel corso delle attività ho collaborato con compagni, animatori e accompagnatori, mantenendo un atteggiamento positivo e rispettoso verso tutti.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">assignment</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Capacità organizzative</h4>
+<p class="text-body-md text-text-muted">Durante i laboratori e le attivit di gruppo ho seguito indicazioni, orari e regole, contribuendo allo svolgimento delle attivit in modo ordinato.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">fitness_center</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-2">Impegno nelle attività pratiche e fisiche</h4>
+<p class="text-body-md text-text-muted">Nelle esperienze come arrampicata, piscina, camminate e giochi all’aperto ho partecipato con costanza ed energia, mettendomi alla prova nelle diverse attivit proposte.</p>
+</div>
+</div></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-gutter gap-6">
+
+<div class="flex gap-8">
+
+
+
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
